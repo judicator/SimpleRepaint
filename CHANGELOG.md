@@ -1,3 +1,9 @@
+0.3.0
+-----
+* Rearranged colors list, added new colors.
++ Parts incompatible with B9PartSwitch are added to grey list. So far three stock parts and several parts from BDArmory and MiningExpansion are greylisted.
++ Greylisted parts will still get repaint ability with stock Part Variants interface, added setting to disable this behavior (enabled by default).
+
 0.2.1
 -----
 + Added ability to repaint parts in flight and setting to disable this behavior (enabled by default).

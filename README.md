@@ -2,16 +2,18 @@
 
 Mod for Kerbal Space Program, implementing simple parts repainting.
 
+
 ## How do I repaint parts?
 
 Open PAW menu by right-clicking on part (in VAB/Hangar or in flight), and choose desired color variant ("Part simple repaint"). See screenshot below.
 ![SimpleRepaint interface](https://i.imgur.com/iOAWoFB.png)
 
+
 ## How does it work?
 
 Each part in the game has one or more 3D-models with materials, shaders and textures tied to them. There is "basic" stock shader (`KSP/Bumped Specular`) that majority of parts use. SimpleRepaint alters `color` modifier for materials with this shader, changing overall part color as a result.
 
-Such approach has some advantages:
+This approach has some advantages:
 1. SimpleRepaint is universal. The majority of parts and mods are supported "out of the box" with no additional configs needed.
 2. Mod contains no textures at all and has low memory footprint. It does, however, generate tons of MM-patches.
 3. Possible colors variants list could be relatively easily edited and supplemented.
@@ -21,9 +23,11 @@ There are serious drawbacks though:
 2. Parts, using not "basic" shader, will not be repainted. Obvious example are probe cores, covered with silver or golden foil. Another example are mods, which use their own shaders even for generic materials (so far I found only one such mod: WBI Mk-33).
 3. Only color can be altered, not shininess, transparency and such. Also, only colors from predefined list could be used.
 
+
 ## Can Simple Repaint be used together with Textures Unlimited?
 
 Yes. Those parts, that have no TU support, will get SimpleRepaint features.
+
 
 ## What parts/mods are not supported?
 
@@ -33,16 +37,19 @@ Yes. Those parts, that have no TU support, will get SimpleRepaint features.
 4. Deployable work lamps and kerbonauts equipment (EVA Jetpack, EVA Repair Kit, ...).
 5. Parts with SSTU Recolor or Textures Unlimited modules, as they already have support for much more powerful repainting mod.
 
+
 ## Is it compatible with part variants?
 
 Yes. However, there is a visual bug: changing part variant resets part color to default. Choosing another color after switching part variant fixes this.
 
+
 ## Dependencies
 
-* [B9PartSwitch (2.16.0 or later)](https://github.com/blowfishpro/B9PartSwitch)
-* [Module manager (last version preferred)](https://github.com/sarbian/ModuleManager)
+* [Module manager (4.2.1)](https://forum.kerbalspaceprogram.com/index.php?/topic/50533-*)
+* [B9PartSwitch (2.18.0)](https://github.com/blowfishpro/B9PartSwitch)
 
-Both mods are not bundled in download and should be downloaded and installed separately.
+Both mods are required and are bundled as part of download.
+
 
 ## Installation
 
@@ -51,20 +58,32 @@ Both mods are not bundled in download and should be downloaded and installed sep
 3. Place the `GameData` folder from downloaded archive inside your Kerbal Space Program folder.
 4. Restore `Colors.cfg` file from backup to `GameData/SimpleRepaint` folder (see para. 1).
 
-## Possible colors and settings
+
+## Possible colors
 
 You can change possible colors variants in `GameData/SimpleRepaint/Colors.cfg` file. There are maximum 24 color variants available. Please set name to NOT_USED for all unused colors.
 
+
+## Settings
+
 If you feel that repainting vessel' parts in flight is not very realistic, you can disable this feature in `GameData/SimpleRepaint/Settings.cfg` file. Just set `RepaintInFlight` value to `false`.
 
-## Regards
+Where are some parts which does not seem to be compatible with B9PartSwitch. Notable examples are stock (not ReStock!) radial ore drills. Those parts still get repaint ability through stock part variants interface. This can be disabled in `GameData/SimpleRepaint/Settings.cfg` file. Set `UseStockVariantSwitcherForB9PSIncompatibleParts` value to `false` if you don't repaint ability for any B9PS-incompatible parts.
+
+
+## Credits
 
 Many thanks to:
-- @Electrocutor for initial Module Manager config file (implementing colors switching via stock PartVariant), which became the basis of this mod. See this topic: https://forum.kerbalspaceprogram.com/index.php?/topic/173208-partvariant-color-tinting/.
+- @Electrocutor for initial Module Manager config file (implementing colors switching via stock PartVariant), which became the basis of this mod. See [this topic](https://forum.kerbalspaceprogram.com/index.php?/topic/173208-partvariant-color-tinting/).
 - @Hohmannson for updating @Electrocutor's initial config and adding ReStock-friendly colors, for lots of suggestions and ideas, and extensive testing of SimpleRepaint.
+
 
 ## Licensing
 
-This mod is distributed under a Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/legalcode).
+This mod is distributed under a Creative Commons Attribution 4.0 International License ([CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode)).
 
 You are free to share and adapt the materials for any purpose, when providing appropriate attribution.
+
+Bundled mods are distributed under their own licenses:
+* ModuleManager by ialdabaoth, Sarbian and Blowfish is licensed under a "CC share-alike license". More information can be found [here](https://forum.kerbalspaceprogram.com/index.php?/topic/50533-*).
+* B9PartSwitch by blowfish is distributed under LGPL v3.0. Details and source are [here](https://github.com/blowfishpro/B9PartSwitch).
