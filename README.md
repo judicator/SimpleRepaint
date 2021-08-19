@@ -66,9 +66,20 @@ You can change possible colors variants in `GameData/SimpleRepaint/Colors.cfg` f
 
 ## Settings
 
-If you feel that repainting vessel' parts in flight is not very realistic, you can disable this feature in `GameData/SimpleRepaint/Settings.cfg` file. Just set `RepaintInFlight` value to `false`.
+There are three settings in `GameData/SimpleRepaint/Settings.cfg` config file.
 
-Where are some parts which does not seem to be compatible with B9PartSwitch. Notable examples are stock (not ReStock!) radial ore drills. Those parts still get repaint ability through stock part variants interface. This can be disabled in `GameData/SimpleRepaint/Settings.cfg` file. Set `UseStockVariantSwitcherForB9PSIncompatibleParts` value to `false` if you don't repaint ability for any B9PS-incompatible parts.
+### Repaint in flight
+
+By default you can repaint your vessel parts even in flight scene. If you feel that it's not very realistic, you can disable this feature: just set `RepaintInFlight` value to `false`.
+
+### Using stock part variants switching instead B9PartSwitch
+
+Where are some parts which does not seem to be compatible with B9PartSwitch. Notable examples are stock (not ReStock!) radial ore drills. Those parts still get repaint ability through stock part variants interface. Set `UseStockVariantSwitcherForB9PSIncompatibleParts` value to `false` if you don't want repaint ability for any B9PS-incompatible parts.
+
+### Repainting only whitelisted parts
+
+By default, all compatible parts (both stock and from mods) will get repainting ability.
+If you disable this behavior by setting `RepaintWhitelistedPartsOnly` value to `true`, only specified parts will get color switching. Where are examples of whitelists in `GameData/SimpleRepaint/Whitelists` folder. They should be renamed `.cfg` files in order to take effect.
 
 
 ## Credits

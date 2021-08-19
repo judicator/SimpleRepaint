@@ -1,3 +1,7 @@
+0.3.1
+-----
++ Added setting to use whitelist-only repainting (disabled by default, see readme).
+
 0.3.0
 -----
 * Rearranged colors list, added new colors.
