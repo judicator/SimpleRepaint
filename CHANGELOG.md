@@ -1,3 +1,8 @@
+0.3.2
+-----
+* Made compability patch for BDArmory guns more universal, which hopefully will improve support for BDA-based parts mods in the future.
+* Several parts from Aviator Arsenal Continued mod added to greylist.
+
 0.3.1
 -----
 + Added setting to use whitelist-only repainting (disabled by default, see readme).
