@@ -1,3 +1,8 @@
+0.3.3
+-----
+* Added some unsupported parts to blacklist (thanks to @Hohmannson).
+* Marked as KPS 1.12.3 compatible.
+
 0.3.2
 -----
 * Made compability patch for BDArmory guns more universal, which hopefully will improve support for BDA-based parts mods in the future.
