@@ -1,3 +1,8 @@
+0.4.0
+-----
+* Changed MM patch order to get rid of problems, caused by interaction with other mods' patches, updating B9PS switchers (i.e. Kerbalism + SSPX).
+* Black and grey lists are now moved to separate folder (IgnoreParts). List of blacklisted parts is expanded, parts from several mods added.
+
 0.3.3
 -----
 * Added some unsupported parts to blacklist (thanks to @Hohmannson).
