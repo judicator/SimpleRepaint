@@ -1,3 +1,9 @@
+0.4.1
+-----
+* Added some parts from VaporVent mod to greylist.
+* Added blacklist for Bluedog_DB mod (about 600 parts are blacklisted from more than a thousand total in BDB).
+* Mod is marked as 1.12.4 compatible.
+
 0.4.0
 -----
 * Changed MM patch order to get rid of problems, caused by interaction with other mods' patches, updating B9PS switchers (i.e. Kerbalism + SSPX).
