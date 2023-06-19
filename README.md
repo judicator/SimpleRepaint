@@ -45,8 +45,8 @@ Yes. However, there is a visual bug: changing part variant resets part color to 
 
 ## Dependencies
 
-* [Module manager (4.2.1)](https://forum.kerbalspaceprogram.com/index.php?/topic/50533-*)
-* [B9PartSwitch (2.18.0)](https://github.com/blowfishpro/B9PartSwitch)
+* [Module manager (4.2.2)](https://forum.kerbalspaceprogram.com/index.php?/topic/50533-*)
+* [B9PartSwitch (2.20.0)](https://github.com/blowfishpro/B9PartSwitch)
 
 Both mods are required and are bundled as part of download.
 
@@ -64,6 +64,12 @@ Both mods are required and are bundled as part of download.
 You can change possible colors variants in `GameData/SimpleRepaint/Colors.cfg` file. There are maximum 24 color variants available. Please set name to NOT_USED for all unused colors.
 
 
+## Black and grey lists
+
+1. Some parts do not support B9PartSwitch for some reason. These are added to so-called "grey list", and will (or will not, depending on `UseStockVariantSwitcherForB9PSIncompatibleParts` setting) get repainting via stock PartVariants. It's not as comfortable as B9PS (in my opinion), and also does not support repainting parts in flight. You can find those parts in `GameData/SimpleRepaint/GreyList.cfg` file.
+2. Some parts are not supported at all, and for some others SimpleRepaint recoloring does not have much sense: silver or golden foil covered, metallic or dark parts will not get any value from it. Those parts are added to black lists. You can find them in `GameData/SimpleRepaint/IgnoreParts` folder.
+
+
 ## Settings
 
 There are three settings in `GameData/SimpleRepaint/Settings.cfg` config file.
@@ -74,12 +80,12 @@ By default you can repaint your vessel parts even in flight scene. If you feel t
 
 ### Using stock part variants switching instead B9PartSwitch
 
-Where are some parts which does not seem to be compatible with B9PartSwitch. Notable examples are stock (not ReStock!) radial ore drills. Those parts still get repaint ability through stock part variants interface. Set `UseStockVariantSwitcherForB9PSIncompatibleParts` value to `false` if you don't want repaint ability for any B9PS-incompatible parts.
+Where are some parts which does not seem to be compatible with B9PartSwitch, and they are added to "grey list". Notable examples are stock (not ReStock!) radial ore drills. Those parts still get repaint ability through stock part variants interface. Set `UseStockVariantSwitcherForB9PSIncompatibleParts` value to `false` if you don't want repaint ability for any B9PS-incompatible parts.
 
 ### Repainting only whitelisted parts
 
 By default, all compatible parts (both stock and from mods) will get repainting ability.
-If you disable this behavior by setting `RepaintWhitelistedPartsOnly` value to `true`, only specified parts will get color switching. Where are examples of whitelists in `GameData/SimpleRepaint/Whitelists` folder. They should be renamed `.cfg` files in order to take effect.
+If you disable this behavior by setting `RepaintWhitelistedPartsOnly` value to `true`, only specified parts will get color switching. Where are examples of whitelists in `GameData/SimpleRepaint/Whitelists` folder. They should be renamed to `.cfg` files in order to take effect.
 
 
 ## Credits
