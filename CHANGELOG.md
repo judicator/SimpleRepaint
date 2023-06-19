@@ -1,3 +1,11 @@
+0.4.2
+-----
+* Added three drills from MKS mod to greylist.
+* Added blacklist for Kerbal Atomics, added reactors and RTGs from dev version of Near Future Electrical to blacklist.
+* Moved greylist to separate GreyList.cfg file.
+* Bundled B9PartSwitch updated to last version (2.20.0).
+* Mod is marked as 1.12.5 compatible.
+
 0.4.1
 -----
 * Added some parts from VaporVent mod to greylist.
